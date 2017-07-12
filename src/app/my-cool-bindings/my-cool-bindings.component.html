@@ -1,0 +1,16 @@
+<section>
+  <h3> {{ feedbackMessage }} </h3>
+
+  <p *ngIf="clickCount > 0">
+    You have clicked {{ clickCount }} times.
+  </p>
+
+  <img [src]="imageUrl" (click)="changeTheImage()">
+
+  <button (click)="updateMessage()"> Click Me </button>
+
+  <input type="text" [disabled]="isInputDisabled">
+  <button (click)="toggleThatInput()">
+    {{ buttonText }}
+  </button>
+</section>
