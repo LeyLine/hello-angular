@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyCoolBindingsComponent } from './my-cool-bindings/my-cool-bindings.component';
 import { InputThangsComponent } from './input-thangs/input-thangs.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InputThangsComponent } from './input-thangs/input-thangs.component';
     HeaderComponent,
     FooterComponent,
     MyCoolBindingsComponent,
-    InputThangsComponent
+    InputThangsComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

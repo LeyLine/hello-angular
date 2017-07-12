@@ -28,10 +28,10 @@ export class InputThangsComponent implements OnInit {
       this.message = 'You are being irresponsible with your body.';
     }
     else if (this.mySelection === 'ketchup') {
-      this.message = 'Gross.'
+      this.message = 'Gross.';
     }
     else {
-      this.message = 'A fine selection.'
+      this.message = 'A fine selection.';
     }
   }
 
