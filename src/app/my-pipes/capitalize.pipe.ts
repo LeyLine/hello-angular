@@ -16,6 +16,10 @@ export class CapitalizePipe implements PipeTransform {
     // {{ "new york city" | capitalize }}
     //        |
   transform(value: any, args?: any): any {
+      if (typeof value !== 'string') {
+        return "";
+      }
+
       // the value variable is the thing that you are modifying
       // (the thing on the left of the "|")
 
@@ -29,8 +33,8 @@ export class CapitalizePipe implements PipeTransform {
       let capitalizedWords = wordsArray.map((oneWord) => {
               // oneWord = "city"
 
-          const capped = oneWord[0].toUpperCase() + oneWord.slice(1).toLowerCase();
-              //                "c".toUpperCase() +            "ity".toLowerCase()
+          const capped = oneWord.charAt(0).toUpperCase() + oneWord.slice(1).toLowerCase();
+              //                       "c".toUpperCase() +            "ity".toLowerCase()
 
           if (capped === 'York') {
             return 'Yolk';

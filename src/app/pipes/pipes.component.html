@@ -4,7 +4,12 @@
   <input type="text" [(ngModel)]="randomText" placeholder="Blah blah blah">
   <p> {{ randomText | uppercase }} </p>
   <p> {{ randomText | lowercase }} </p>
+
+    <!-- we made the "capitalize" pipe! -->
   <p> {{ randomText | capitalize }} </p>
+
+    <!-- we made the "emojify" pipe! -->
+  <p> {{ randomText | emojify }} </p>
 
   <p>
     Right now it's
