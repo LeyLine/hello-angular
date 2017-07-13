@@ -1,0 +1,42 @@
+<section>
+  <h3> Directives Examples </h3>
+
+  <button (click)="buttonA()"> Toggle Size </button>
+  <button (click)="buttonB()"> Toggle Color </button>
+  <button (click)="buttonC()"> Toggle Font </button>
+
+              <!-- "big" is the CSS class name
+                     |  "isBigSize" is the variable name
+                     |        |                           -->
+  <div [ngClass]="{ big: isBigSize, colorful: hasColor, comic: isComic }">
+    <p> Lorem ipsum dolor sit amet. </p>
+  </div>
+
+  <select [(ngModel)]="dropdownSelection">
+    <option value="">Choose Your Pizza Style</option>
+    <option value="nyc">New York Style</option>
+    <option value="deep">Deep Dish</option>
+    <option value="thin">Thin Crust</option>
+    <option value="wood">Wood Oven</option>
+    <option value="chicago">Chicago Style (different from Deep Dish)</option>
+  </select>
+
+  <h4> {{ dropdownSelection }} </h4>
+
+  <div [ngSwitch]="dropdownSelection">
+    <!-- for string comparisons you need quotes in your quotes -->
+    <div *ngSwitchCase="'nyc'">
+      <img src="https://media.giphy.com/media/26gIOKkdiVXce8i1q/giphy.gif">
+    </div>
+
+    <!-- for strings comparisons you need quotes in your quotes -->
+    <div *ngSwitchCase="'deep'">
+      <h4> Deep Dish !== Chicago Style </h4>
+      <img src="https://media.giphy.com/media/n0gFpvaXqUskU/giphy.gif">
+    </div>
+
+    <div *ngSwitchDefault>
+      <h4> Cool, I guess. </h4>
+    </div>
+  </div>
+</section>

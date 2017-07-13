@@ -1,0 +1,23 @@
+section {
+  border: 5px groove darkolivegreen;
+}
+
+div {
+  border: 1px groove black;
+}
+
+.big {
+  font-size: 75px;
+  padding: 30px;
+  border-width: 20px;
+}
+
+.colorful {
+  border-color: darksalmon;
+  background-color: chartreuse;
+  color: rebeccapurple;
+}
+
+.comic {
+  font-family: "Comic Sans MS", cursive;
+}
