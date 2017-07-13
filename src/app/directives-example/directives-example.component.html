@@ -1,5 +1,10 @@
 <section>
-  <h3> Directives Examples </h3>
+             <!-- "color" is the CSS property
+                     |   "headingColor" is the variable
+                     |          |                       -->
+  <h3 [ngStyle]="{ color: headingColor }">
+    Directives Examples
+  </h3>
 
   <button (click)="buttonA()"> Toggle Size </button>
   <button (click)="buttonB()"> Toggle Color </button>

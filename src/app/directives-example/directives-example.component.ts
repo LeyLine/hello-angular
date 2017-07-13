@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives-example.component.css']
 })
 export class DirectivesExampleComponent implements OnInit {
+  headingColor: string = 'black';
+
   isBigSize: boolean = false;
   hasColor: boolean = false;
   isComic: boolean = true;
@@ -14,7 +16,16 @@ export class DirectivesExampleComponent implements OnInit {
 
   constructor() { }
 
+  // "ngOnInit()" will be called as soon as the component is loaded
+  // it's good for any initial setup your component needs
   ngOnInit() {
+      setInterval(() => {
+          const r = Math.floor(Math.random() * 256);
+          const g = Math.floor(Math.random() * 256);
+          const b = Math.floor(Math.random() * 256);
+          this.headingColor = `rgb(${r},  ${g},  ${b})`;
+                          //  'rgb('+r+', '+g+', '+b+')'
+      }, 5000);
   }
 
   buttonA() {
