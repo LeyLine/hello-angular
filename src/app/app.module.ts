@@ -10,6 +10,7 @@ import { InputThangsComponent } from './input-thangs/input-thangs.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { CapitalizePipe } from './my-pipes/capitalize.pipe';
 import { EmojifyPipe } from './my-pipes/emojify.pipe';
+import { DoTheSearchPipe } from './my-pipes/do-the-search.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmojifyPipe } from './my-pipes/emojify.pipe';
     InputThangsComponent,
     PipesComponent,
     CapitalizePipe,
-    EmojifyPipe
+    EmojifyPipe,
+    DoTheSearchPipe
   ],
   imports: [
     BrowserModule,
